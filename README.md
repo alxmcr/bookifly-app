@@ -1,46 +1,88 @@
-# Getting Started with Create React App
+# ✈️ Bookifly App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Es una aplicación web para una aerolina que permite la reservación de vuelos. Volando con seguridad, rápidez y confianza 🌴.
 
-## Available Scripts
+![App Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635666877/Portfolio/bookifly-app/screenshots/bookifly-home-page_fb7rhg.png)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Búsqueda de vuelos por ciudad, fecha y cantidad de personas.
+- Selecciona tu vuelo para reservar.
+- Reserva tu vuelo.
+- Calcular el precio de tu vuelo en función de la cantidad de personas y el costo del pasaje.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Lessons Learned
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Yo aprendí y practiqué más acerca de React.js, React Hooks, Redux (Reducers, Actions, Store), Sass, React Context y TypeScript.
 
-### `npm test`
+## Run Locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clonar el proyecto
 
-### `npm run build`
+```bash
+  git clone https://github.com/alxmcr/bookifly-app
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ir donde se encuentra el directorio del proyecto.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  cd bookifly-app
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instalar NPM dependencies
 
-### `npm run eject`
+```bash
+  npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Iniciar el Frontend server
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  npm run start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Abrir el navegador:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+http://localhost:3000
+```
 
-## Learn More
+## Environment Variables
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para arrancar el proyecto se necesita de variables de entorno(`.env`). Donde se puede, colocar en la raíz del proyecto: `bookifly-app/.env` (ver: `.env-sample`)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+REACT_APP_BACKEND_API_BASE_URL=http://localhost:4000
+```
+
+Extra: Es necesario iniciar el [Backend server: bookifly_api_py](https://github.com/alxmcr/bookifly_api_py) (Backend API)
+
+## Rutas Habilitadas
+
+- Inicio (`/`)
+- Vuelos (`/flights`)
+- Reservas (`/bookings`)
+
+## Tech Stack
+
+HTML, CSS, Sass, JavaScript, Typescript, React.js, and Redux.
+
+## Screenshoots
+
+![Home - Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635231627/Portfolio/bookifly-app/screenshots/desktop-version_b9coor.png)
+
+![Flights page - Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635666876/Portfolio/bookifly-app/screenshots/bookifly-flight-page_h16fzi.png)
+
+![Flight bookings page - Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635666876/Portfolio/bookifly-app/screenshots/bookifly-flight-bookings-page_eos62y.png)
+
+![Flight bookings page: Customer form - Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635666876/Portfolio/bookifly-app/screenshots/bookifly-customer-info_ewnpji.png)
+
+![Flight bookings page: Customer Thanks - Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635666876/Portfolio/bookifly-app/screenshots/bookifly-thanks-modal_cxhkcc.png)
+
+## Authors
+
+- [Alejandro M. Coca Rojas (@alxmcr)](https://www.github.com/alxmcr)
+
+## Feedback
+
+If you have any feedback, please reach out to me at amcocarojas@gmail.com.
