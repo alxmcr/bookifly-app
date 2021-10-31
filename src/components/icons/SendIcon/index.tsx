@@ -14,7 +14,6 @@ export const SendIcon = ({
     >
       <path
         d="M5.122 9.207l-3.243-7.5 15 7.5-15 7.5 3.243-7.5zm0 0h3.617"
-        stroke="#000"
         strokeWidth={1}
         strokeLinecap="round"
         strokeLinejoin="round"

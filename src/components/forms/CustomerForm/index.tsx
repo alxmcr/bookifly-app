@@ -122,7 +122,7 @@ export const CustomerForm = () => {
           className="customer-form__button"
           disabled={!allowedBooking}
         >
-          Enviar datos
+          Reservar
           <SendIcon className="customer-form__icon" width={20} height={20} />
         </button>
       </div>

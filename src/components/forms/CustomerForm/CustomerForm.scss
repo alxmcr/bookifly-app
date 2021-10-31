@@ -10,6 +10,7 @@
   &__button {
     align-items: center;
     background-color: transparent;
+    border: 1px solid $disabled;
     border-radius: 0.5rem;
     cursor: pointer;
     display: flex;
@@ -34,6 +35,14 @@
           stroke: $primary;
         }
       }
+      svg {
+        fill: $light;
+        stroke: $dark;
+      }
+    }
+    svg {
+      fill: $light;
+      stroke: $disabled;
     }
     &--active {
       background-color: $primary;
@@ -51,7 +60,7 @@
   }
   &__icon {
     fill: $light;
-    stroke: $disabled;
+    stroke: $dark;
   }
   &__input,
   &__textarea {
