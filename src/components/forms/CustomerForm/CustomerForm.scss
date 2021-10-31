@@ -1,0 +1,72 @@
+@import "../../../variables";
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  &__actions {
+    margin-top: 0.5rem;
+  }
+  &__button {
+    align-items: center;
+    background-color: $primary;
+    border: 1px solid $primary;
+    border-radius: 0.5rem;
+    color: $dark;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: $button-height;
+    outline: $primary;
+    padding: 0.5rem;
+    width: 100%;
+    &:hover {
+      background-color: $dark;
+      border: none;
+      color: $primary;
+      transform: scale(1.03);
+      svg {
+        fill: $primary;
+        stroke: $primary;
+      }
+    }
+    &--active {
+      background-color: $primary;
+      color: $dark;
+      svg {
+        fill: $dark;
+        stroke: $dark;
+      }
+    }
+  }
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  &__icon {
+    fill: $primary;
+    stroke: $primary;
+  }
+  &__input,
+  &__textarea {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: 1px solid $primary;
+    outline: none;
+    padding: 0.5rem;
+  }
+  &__input {
+    height: $input-height;
+  }
+  &__required {
+    color: $error;
+    font-weight: 800;
+  }
+  &__textarea {
+    resize: none;
+    height: $textarea-height;
+  }
+}

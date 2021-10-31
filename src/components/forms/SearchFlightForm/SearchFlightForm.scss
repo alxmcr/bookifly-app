@@ -1,0 +1,86 @@
+@import "../../../variables";
+
+.search-flight-form {
+  background-color: $light;
+  border-radius: 0.8rem;
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  padding: 1rem $app-main-padding-right;
+  width: 90%;
+  &__actions {
+    padding: 0.5rem;
+  }
+  &__button {
+    align-items: center;
+    background-color: $primary;
+    border: 1px solid $primary;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    height: $input-height;
+    outline: $primary;
+    padding: 0.5rem;
+    width: 100%;
+    &:hover {
+      background-color: $dark;
+      border: 1px solid $dark;
+      color: $primary;
+      transform: scale(1.03);
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+  &__icon{
+    fill: $dark;
+  }
+  &__cities,
+  &__logistics {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .search-flight-form {
+    width: 87%;
+    &__cities,
+    &__logistics {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .search-flight-form {
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 1.5rem;
+    &__actions {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    &__button {
+      border-radius: 50%;
+      height: $button-search-icon-height;
+      width: $button-search-icon-height;
+    }
+    &__text {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xl) {
+  .search-flight-form {
+    width: 70%;
+  }
+}
