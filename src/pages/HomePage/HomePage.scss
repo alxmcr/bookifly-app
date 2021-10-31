@@ -1,0 +1,54 @@
+@import "../../variables";
+
+.home-page {
+  background-color: burlywood;
+  background-image: url(https://images.pexels.com/photos/416676/pexels-photo-416676.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+  background-position: center;
+  background-origin: content-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: $app-main-height;
+  &__description,
+  &__name {
+    background-color: $primary;
+    transform: rotate(358deg);
+    color: $dark;
+    font-weight: 800;
+    margin: 1rem 0;
+    padding: 0 $app-main-padding-right;
+  }
+  &__description {
+    font-size: 1.5rem;
+    width: 98%;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .home-page {
+    &__description,
+    &__name {
+      color: $dark;
+      margin: 0.5rem 0;
+      padding: $app-main-padding-right;
+      text-align: center;
+      transform: rotate(358deg);
+    }
+    &__description {
+      font-size: 2rem;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .home-page {
+    &__description {
+      font-size: 2rem;
+      width: 70%;
+    }
+  }
+}

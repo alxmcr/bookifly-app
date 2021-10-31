@@ -1,0 +1,84 @@
+@import "../../variables";
+
+.flight-bookings-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: $app-main-height;
+  padding: 0 $app-main-padding-right;
+  &__actions {
+    margin-top: 2rem;
+  }
+  &__button {
+    align-items: center;
+    background-color: $primary;
+    border: 1px solid $primary;
+    border-radius: 0.5rem;
+    color: $dark;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    height: $input-height;
+    outline: $dark;
+    padding: 0.5rem;
+    width: 100%;
+    &:hover {
+      background-color: $dark;
+      border: 1px solid $primary;
+      color: $primary;
+      transform: scale(1.03);
+    }
+  }
+  &__content {
+    margin-bottom: 5rem;
+  }
+  &__link {
+    align-items: center;
+    background-color: $primary;
+    border-radius: 0.8rem;
+    color: $dark;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+    width: auto;
+    &:active,
+    &:visited {
+      color: $dark;
+    }
+    &:hover {
+      background-color: $dark;
+      border: 1px solid $primary;
+      color: $primary;
+      transform: scale(1.05);
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .flight-bookings-page {
+    &__content {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .flight-bookings-page {
+    &__content {
+      width: 87%;
+    }
+  }
+}
