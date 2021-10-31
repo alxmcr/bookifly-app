@@ -1,0 +1,26 @@
+@import "../../../variables";
+
+.logistic-box {
+  &__city {
+    margin: 0;
+    text-align: center;
+  }
+  &__time {
+    color: $primary;
+    font-size: $font-size-time;
+    font-weight: 800;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .logistic-box {
+    &__city {
+      text-align: center;
+    }
+    &__time {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../../variables";
+
+.flight-city-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  &:hover {
+    background-color: $hover;
+    border-radius: 0.6rem;
+  }
+  &__label {
+    color: $primary;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../../variables";
+
+.flight-passengers-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  &:hover {
+    background-color: $hover;
+    border-radius: 0.6rem;
+  }
+  &__input {
+    border: 1px solid $primary;
+    border-radius: 0.5rem;
+    height: $input-height;
+    outline: $primary;
+    padding: 0.5rem;
+  }
+  &__label {
+    color: $primary;
+  }
+}
