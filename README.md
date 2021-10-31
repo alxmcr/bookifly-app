@@ -85,6 +85,10 @@ HTML, CSS, Sass, JavaScript, Typescript, React.js, and Redux.
 
 ![Flight bookings page: Customer Thanks - Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635666876/Portfolio/bookifly-app/screenshots/bookifly-thanks-modal_cxhkcc.png)
 
+## Demo
+
+[https://bookifly-app.netlify.app/](https://bookifly-app.netlify.app/)
+
 ## Authors
 
 - [Alejandro M. Coca Rojas (@alxmcr)](https://www.github.com/alxmcr)
