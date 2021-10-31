@@ -1,0 +1,13 @@
+@import "../../../variables";
+
+.app-footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: $app-footer-height;
+  &__created {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}

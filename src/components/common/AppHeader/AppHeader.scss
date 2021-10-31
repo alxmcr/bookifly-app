@@ -1,0 +1,10 @@
+@import "../../../variables";
+
+.app-header {
+  color: $primary;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: $app-header-height;
+  padding: 0 0.5rem;
+}

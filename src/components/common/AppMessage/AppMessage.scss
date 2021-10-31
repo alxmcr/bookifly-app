@@ -1,0 +1,14 @@
+@import "../../../variables";
+
+.app-message {
+  background-color: $dark;
+  color: $dark;
+  padding: 1rem;
+  text-align: center;
+  &--error {
+    color: $error;
+  }
+  &--info {
+    color: $primary;
+  }
+}

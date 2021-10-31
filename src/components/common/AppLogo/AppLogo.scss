@@ -1,0 +1,45 @@
+@import "../../../variables";
+
+.app-logo {
+  align-items: center;
+  display: flex;
+  gap: 0.65rem;
+  justify-content: center;
+  &__image {
+    height: $app-logo-height;
+    width: $app-logo-height;
+  }
+  &__link {
+    align-items: center;
+    border-radius: 0.8rem;
+    color: $primary;
+    cursor: pointer;
+    display: flex;
+    height: $app-navigation-height;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    &:active,
+    &:visited {
+      color: $primary;
+    }
+    &--name {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .app-logo {
+    &__link {
+      &--name {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

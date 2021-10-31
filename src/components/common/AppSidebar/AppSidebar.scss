@@ -1,0 +1,84 @@
+@import "../../../variables";
+
+.sidebar {
+  display: none;
+  left: -$sidebar-right-width;
+  transition: left 1.3s;
+  &--show {
+    background-color: $light;
+    color: $dark;
+    display: block;
+    left: 0;
+    min-height: $sidebar-right-min-height;
+    overflow-y: auto;
+    padding: 0 1.5rem;
+    position: fixed;
+    width: 90%;
+    top: 0;
+    transition: left 1.3s;
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 1px $dark;
+      -webkit-box-shadow: inset 0 0 1px $dark;
+      background-color: #f5f5f5;
+    }
+  
+    &::-webkit-scrollbar {
+      height: 4px;
+      width: 5px;
+      background-color: #f5f5f5;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      height: 4px;
+      width: 1px;
+      background-color: $dark;
+    }
+  }
+  &__app {
+    color: $primary;
+    margin: 0;
+    padding: 0;
+  }
+  &__body {
+    margin-bottom: 5rem;
+  }
+  &__button {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      svg {
+        stroke: $primary;
+      }
+    }
+  }
+  &__header {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    justify-content: space-between;
+  }
+  &__icon {
+    stroke: $dark;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .sidebar {
+    &--show {
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .sidebar {
+    &--show {
+      width: 40%;
+    }
+  }
+}

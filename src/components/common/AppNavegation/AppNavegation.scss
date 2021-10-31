@@ -1,0 +1,44 @@
+@import "../../../variables";
+
+.app-navigation {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__icon {
+    fill: $primary;
+  }
+  &__link {
+    align-items: center;
+    border-radius: 0.8rem;
+    color: $primary;
+    cursor: pointer;
+    display: flex;
+    height: $app-navigation-height;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    &:active,
+    &:visited {
+      color: $primary;
+    }
+    &:hover {
+      background-color: $primary;
+      color: $dark;
+      svg {
+        fill: $dark;
+      }
+    }
+  }
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    min-height: $app-navigation-height;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
