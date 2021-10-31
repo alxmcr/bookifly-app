@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { createStore, EmptyObject, Store } from "redux";
 import {
@@ -32,19 +32,44 @@ beforeEach(() => {
   reduxStore = createStore(rootReducer);
 });
 
-test("render Flight card", () => {
-  const { getByText } = render(
-    <Provider store={reduxStore}>
-      <FlightCard flight={mockFlight} />
-    </Provider>
-  );
-  const date = getByText("Nov 01, 2021");
-  const departure = getByText("08:00:00");
-  const arrival = getByText("10:00:00");
-  const price = getByText("($500 / persona)");
+describe("Testing: Flight card", () => {
+  test("render flight card", () => {
+    const { getByText } = render(
+      <Provider store={reduxStore}>
+        <FlightCard flight={mockFlight} />
+      </Provider>
+    );
+    const date = getByText("Nov 01, 2021");
+    const departure = getByText("08:00:00");
+    const arrival = getByText("10:00:00");
+    const price = getByText("($500 / persona)");
 
-  expect(date).toBeInTheDocument();
-  expect(departure).toBeInTheDocument();
-  expect(arrival).toBeInTheDocument();
-  expect(price).toBeInTheDocument();
+    expect(date).toBeInTheDocument();
+    expect(departure).toBeInTheDocument();
+    expect(arrival).toBeInTheDocument();
+    expect(price).toBeInTheDocument();
+  });
+
+  test("add flight to cart", () => {
+    const { getByText } = render(
+      <Provider store={reduxStore}>
+        <FlightCard flight={mockFlight} />
+      </Provider>
+    );
+    const date = getByText("Nov 01, 2021");
+    const departure = getByText("08:00:00");
+    const arrival = getByText("10:00:00");
+    const price = getByText("($500 / persona)");
+    const btnAddToCart = getByText("Añadir al carrito");
+    
+    expect(date).toBeInTheDocument();
+    expect(departure).toBeInTheDocument();
+    expect(arrival).toBeInTheDocument();
+    expect(price).toBeInTheDocument();
+    expect(btnAddToCart).toBeInTheDocument();
+    
+    fireEvent.click(btnAddToCart);
+    const btnRemoveFromCart = getByText("Quitar al carrito");
+    expect(btnRemoveFromCart).toBeInTheDocument();
+  });
 });
