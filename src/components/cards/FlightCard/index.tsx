@@ -33,6 +33,7 @@ export const FlightCard = ({ flight }: FlightCardProps) => {
     passengers
   );
   const flightDate = convertStringToDate(flight.date);
+  const priceFlightByPerson = `($${flight.price} / persona)`;
 
   const handleAddToCart = () => {
     dispatch(addFlightBooking(flightBooking));
@@ -79,7 +80,7 @@ export const FlightCard = ({ flight }: FlightCardProps) => {
             Añadir al carrito
           </button>
         )}
-        <p className="flight-card__price">(${flight.price} / persona)</p>
+        <p className="flight-card__price">{priceFlightByPerson}</p>
       </footer>
     </article>
   );
