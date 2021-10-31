@@ -1,6 +1,6 @@
 # ✈️ Bookifly App
 
-Es una aplicación web para una aerolina que permite la reservación de vuelos. Volando con seguridad, rápidez y confianza 🌴.
+Es una aplicación web para una aerolínea que permite la reservación de vuelos. Volando con seguridad, rápidez y confianza 🌴.
 
 ![App Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635666877/Portfolio/bookifly-app/screenshots/bookifly-home-page_fb7rhg.png)
 
@@ -47,6 +47,8 @@ Abrir el navegador:
 http://localhost:3000
 ```
 
+Nota.-: Es necesario iniciar el [Backend server: bookifly_api_py](https://github.com/alxmcr/bookifly_api_py) (Backend API)
+
 ## Environment Variables
 
 Para arrancar el proyecto se necesita de variables de entorno(`.env`). Donde se puede, colocar en la raíz del proyecto: `bookifly-app/.env` (ver: `.env-sample`)
@@ -55,9 +57,13 @@ Para arrancar el proyecto se necesita de variables de entorno(`.env`). Donde se 
 REACT_APP_BACKEND_API_BASE_URL=http://localhost:4000
 ```
 
-Extra: Es necesario iniciar el [Backend server: bookifly_api_py](https://github.com/alxmcr/bookifly_api_py) (Backend API)
+o si tienes un servidor en la nube:
 
-## Rutas Habilitadas
+```
+REACT_APP_BACKEND_API_BASE_URL=https://bookifly-api-py.herokuapp.com
+```
+
+## Rutas Habilitadas en la aplicación
 
 - Inicio (`/`)
 - Vuelos (`/flights`)
@@ -69,7 +75,7 @@ HTML, CSS, Sass, JavaScript, Typescript, React.js, and Redux.
 
 ## Screenshoots
 
-![Home - Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635231627/Portfolio/bookifly-app/screenshots/desktop-version_b9coor.png)
+![App Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635666877/Portfolio/bookifly-app/screenshots/bookifly-home-page_fb7rhg.png)
 
 ![Flights page - Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1635666876/Portfolio/bookifly-app/screenshots/bookifly-flight-page_h16fzi.png)
 
