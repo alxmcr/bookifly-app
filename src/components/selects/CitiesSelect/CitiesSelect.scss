@@ -1,0 +1,13 @@
+@import "../../../variables";
+
+.cities-select {
+  background-color: transparent;
+  border: 1px solid $primary;
+  border-radius: 0.5rem;
+  height: $input-height;
+  outline: $primary;
+  padding: 0.5rem;
+  &__option {
+    padding: 0.5rem;
+  }
+}
