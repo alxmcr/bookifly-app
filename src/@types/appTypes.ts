@@ -33,3 +33,10 @@ export interface SearchFlight {
     date: Date;
     passengers: number;
 }
+
+export interface Customer {
+    name: string,
+    lastname: string,
+    email: string,
+    address: string
+}
