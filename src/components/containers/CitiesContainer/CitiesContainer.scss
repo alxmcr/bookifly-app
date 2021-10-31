@@ -1,0 +1,44 @@
+@import "../../../variables";
+
+.cities-container {
+  background-color: $primary;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  width: 100%;
+  &__icon {
+    fill: $dark;
+  }
+  &__separator {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .cities-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    &__separator {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .cities-container {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: $screen-xl) {
+  .cities-container {
+    width: 35%;
+  }
+}

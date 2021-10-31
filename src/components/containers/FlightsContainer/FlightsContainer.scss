@@ -1,0 +1,27 @@
+@import "../../../variables";
+
+.flights-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+@media screen and (min-width: $screen-sm) {
+  .flights-container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .flights-container {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: $screen-xl) {
+  .flights-container {
+    width: 35%;
+  }
+}
