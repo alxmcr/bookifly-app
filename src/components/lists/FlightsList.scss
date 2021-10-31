@@ -1,0 +1,33 @@
+@import "../../variables";
+
+.flights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  &__link {
+    align-items: center;
+    background-color: $primary;
+    border-radius: 0.8rem;
+    color: $dark;
+    cursor: pointer;
+    display: flex;
+    height: $app-navigation-height;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    &:active,
+    &:visited {
+      color: $dark;
+    }
+    &:hover {
+      background-color: $dark;
+      border: 1px solid $primary;
+      color: $primary;
+      transform: scale(1.05);
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+}
