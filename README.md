@@ -71,7 +71,17 @@ REACT_APP_BACKEND_API_BASE_URL=https://bookifly-api-py.herokuapp.com
 
 ## Tech Stack
 
-HTML, CSS, Sass, JavaScript, Typescript, React.js, and Redux.
+- `typescript`: "^4.4.4"
+- `@testing-library/jest-dom`: "^5.14.1"
+- `@testing-library/react`: "^11.2.7"
+- `@testing-library/user-event`: "^12.8.3"
+- `react`: "^17.0.2"
+- `react-dom`: "^17.0.2"
+- `react-redux`: "^7.2.6"
+- `react-router-dom`: "^5.3.0"
+- `redux`: "^4.1.2"
+- `redux-devtools-extension`: "^2.13.9"
+- `sass`: "^1.43.4"
 
 ## Screenshoots
 
