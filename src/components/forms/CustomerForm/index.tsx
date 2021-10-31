@@ -1,10 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { OverlayContext } from "../../../providers/OverlayProvider";
 import { SidebarContext } from "../../../providers/SidebarProvider";
 import { SendIcon } from "../../icons/SendIcon";
 import "./CustomerForm.scss";
 
 export const CustomerForm = () => {
+  const [allowedBooking, setAllowedBooking] = useState(false);
   const [name, setName] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
@@ -36,6 +37,14 @@ export const CustomerForm = () => {
     setEmail("");
     setAddress("");
   };
+
+  useEffect(() => {
+    if (name && lastname && email && address) {
+      setAllowedBooking(true);
+    } else {
+      setAllowedBooking(false);
+    }
+  }, [name, lastname, email, address]);
 
   return (
     <form className="customer-form" onSubmit={handleSubmit}>
@@ -108,7 +117,11 @@ export const CustomerForm = () => {
         />
       </div>
       <div className="customer-form__actions">
-        <button type="submit" className="customer-form__button">
+        <button
+          type="submit"
+          className="customer-form__button"
+          disabled={!allowedBooking}
+        >
           Enviar datos
           <SendIcon className="customer-form__icon" width={20} height={20} />
         </button>

@@ -9,10 +9,8 @@
   }
   &__button {
     align-items: center;
-    background-color: $primary;
-    border: 1px solid $primary;
+    background-color: transparent;
     border-radius: 0.5rem;
-    color: $dark;
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
@@ -22,14 +20,19 @@
     outline: $primary;
     padding: 0.5rem;
     width: 100%;
-    &:hover {
-      background-color: $dark;
-      border: none;
-      color: $primary;
-      transform: scale(1.03);
-      svg {
-        fill: $primary;
-        stroke: $primary;
+    &:enabled {
+      background-color: $primary;
+      border: 1px solid $primary;
+      color: $dark;
+      &:hover {
+        background-color: $dark;
+        border: none;
+        color: $primary;
+        transform: scale(1.03);
+        svg {
+          fill: $primary;
+          stroke: $primary;
+        }
       }
     }
     &--active {
@@ -47,8 +50,8 @@
     gap: 0.5rem;
   }
   &__icon {
-    fill: $primary;
-    stroke: $primary;
+    fill: $light;
+    stroke: $disabled;
   }
   &__input,
   &__textarea {
