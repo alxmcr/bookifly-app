@@ -1,0 +1,93 @@
+@import "../../../variables";
+
+.success-transaction-card {
+  align-items: center;
+  background-color: $light;
+  border-radius: 0.5rem;
+  color: $dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: $dialog-height;
+  padding: 1rem;
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  &__body {
+    height: 10rem;
+  }
+  &__button {
+    align-items: center;
+    border-radius: 0.5rem;
+    color: $dark;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    height: $input-height;
+    outline: $primary;
+    padding: 0.5rem;
+    width: 100%;
+    &:hover {
+      background-color: $dark;
+      border: none;
+      color: $primary;
+      transform: scale(1.03);
+      svg {
+        fill: $primary;
+      }
+    }
+    &--confirm {
+      background-color: $primary;
+      border: none;
+      color: $dark;
+      &:hover {
+        background-color: $dark;
+        border: none;
+        color: $primary;
+        transform: scale(1.03);
+        svg {
+          fill: $primary;
+        }
+      }
+    }
+    &--cancel {
+      background-color: transparent;
+      border: 1px solid $close;
+      color: $close;
+      &:hover {
+        background-color: $close;
+        border: none;
+        color: $light;
+        transform: scale(1.03);
+        svg {
+          fill: $light;
+        }
+      }
+    }
+  }
+  &__description {
+    margin: 0;
+    padding: 1rem 0;
+  }
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  &__icon {
+    fill: $success;
+  }
+  &__title {
+    color: $success;
+    font-weight: 800;
+    margin: 0;
+    text-align: center;
+  }
+}

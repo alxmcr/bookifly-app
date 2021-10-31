@@ -1,0 +1,31 @@
+@import "../../../variables";
+
+.city {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.35rem 0.7rem;
+  &:nth-child(2) {
+    border-left: 1px solid $dark;
+  }
+  &__name {
+    font-size: 1.75rem;
+  }
+  &__country,
+  &__name {
+    color: $dark;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .city {
+    &:nth-child(2) {
+      border-left: none;
+    }
+  }
+}
