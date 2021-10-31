@@ -18,7 +18,6 @@ import { CartIcon } from "../../icons/CartIcon";
 import "./FlightCard.scss";
 
 export const FlightCard = ({ flight }: FlightCardProps) => {
-  if (flight === null) return null;
   const dispatch = useDispatch();
   const flightBookings = useSelector<AppReduxState>(
     (state) => state.bookings.flightBookings

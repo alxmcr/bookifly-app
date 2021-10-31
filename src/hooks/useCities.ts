@@ -35,7 +35,7 @@ export const useCities = () => {
         return function cancel() {
             abortController?.abort();
         };
-    }, [])
+    }, [dispatch])
 
     return { cities, loadingCities, errorCities };
 }

@@ -11,14 +11,13 @@ import "./FlightBookingCard.scss";
 export const FlightBookingCard = ({
   flightBooking,
 }: FlightBookingCardProps) => {
-  if (flightBooking === null) return null;
   const dispatch = useDispatch();
   const cities = useSelector<AppReduxState>(
     (state) => state.cities.cities
   ) as City[];
   const cityFrom = getCityFromContext(flightBooking?.flight_from, cities);
   const cityTo = getCityFromContext(flightBooking?.flight_to, cities);
-  const subTotal = flightBooking.price * flightBooking.nroPassengers;
+  const subTotal = flightBooking?.price * flightBooking?.nroPassengers;
   const handleDeleteFlightBooking = () => {
     dispatch(removeFlightBooking(flightBooking));
   };

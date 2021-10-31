@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { FlightsListProps } from "../../@types/appPropTypes";
 import { FlightCard } from "../cards/FlightCard";
 import { MessageContainer } from "../containers/MessageContainer";
