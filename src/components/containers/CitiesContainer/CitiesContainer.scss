@@ -21,6 +21,7 @@
   .cities-container {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 80%;
     &__separator {
@@ -33,6 +34,10 @@
 
 @media screen and (min-width: $screen-lg) {
   .cities-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 55%;
   }
 }
