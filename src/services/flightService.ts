@@ -1,6 +1,6 @@
 import { Flight } from "../@types/appTypes";
 
-const API_URL = import.meta.env.VITE_APP_BACKEND_API_BASE_URL;
+const API_URL = process.env.REACT_APP_BACKEND_API_BASE_URL;
 
 export const getAllFlights = async (signal: AbortSignal): Promise<Flight[]> => {
     const myHeaders = new Headers();
